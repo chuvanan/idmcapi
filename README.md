@@ -31,8 +31,8 @@ implemented:
 
 * `get_countries`: Returns an array of countries in the database
 
-* `get_country_overview`: Returns a country displacement information and
-  includes population and refugee numbers
+* `get_overview`: Returns a country displacement information and includes
+  population and refugee numbers
 
 * `get_confict_data`: Returns all available conflict displacement data
 
