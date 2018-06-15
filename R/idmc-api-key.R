@@ -15,7 +15,7 @@
 idmc_api_key <- function(force = FALSE) {
 
     key <- Sys.getenv('IDMC_API_KEY')
-    if (!identical(env, "") && !force) return(key)
+    if (!identical(key, "") && !force) return(key)
 
     if (!interactive()) {
         stop("Please set env var IDMC_API_KEY to your IDMC API key",
