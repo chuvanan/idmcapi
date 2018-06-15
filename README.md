@@ -25,7 +25,9 @@ devtools::install_github("chuvanan/idmcapi")
 
 ## API
 
-The following functions are implemented:
+The following
+[functions](https://github.com/idmc-labs/IDMC-Platform-API/wiki/Endpoints) are
+implemented:
 
 * `get_countries`: Returns an array of countries in the database
 
