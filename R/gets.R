@@ -22,9 +22,8 @@ get_countries <- function(sort = c('name', 'iso3'), ci = idmc_api_key()) {
     httr::stop_for_status(res)
 
     dta <- httr::content(res, as = 'parsed')$result
-    dta <- do.call('rbind', dta)
-    dta <- as.data.frame(dta, stringsAsFactors = FALSE)
-    dta[] <- lapply(dta, unlist)
+    dta <- lapply(dta, as.data.frame, stringsAsFactors = FALSE)
+    dta <- bind_dtfs(dta)
     dta
 
 }
