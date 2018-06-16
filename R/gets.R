@@ -22,6 +22,8 @@ get_countries <- function(sort = c('name', 'iso3'), ci = idmc_api_key()) {
     httr::stop_for_status(res)
 
     dta <- httr::content(res, as = 'parsed')$result
+    if (length(dta) == 0L) return(NULL)
+
     dta <- lapply(dta, as.data.frame, stringsAsFactors = FALSE)
     dta <- bind_dtfs(dta)
     dta
@@ -52,6 +54,7 @@ get_overview <- function(iso3, ci = idmc_api_key()) {
     httr::stop_for_status(res)
 
     dta <- httr::content(res, as = 'parsed')$result
+    if (length(dta) == 0L) return(NULL)
 
     dta <- data.frame(
         fields = names(unlist(dta)),
@@ -110,6 +113,8 @@ get_confict_data <- function(iso3, year, limit, ci = idmc_api_key()) {
     httr::stop_for_status(res)
 
     dta <- httr::content(res, as = 'parsed')$result
+    if (length(dta) == 0L) return(NULL)
+
     dta <- lapply(dta, as.data.frame, stringsAsFactors = FALSE)
     dta <- bind_dtfs(dta)
     dta
@@ -163,6 +168,8 @@ get_disaster_data <- function(iso3, year, limit, ci = idmc_api_key()) {
     httr::stop_for_status(res)
 
     dta <- httr::content(res, as = 'parsed')$result
+    if (length(dta) == 0L) return(NULL)
+
     dta <- lapply(dta, as.data.frame, stringsAsFactors = FALSE)
     dta <- bind_dtfs(dta)
     dta
@@ -215,6 +222,8 @@ get_displacement_data <- function(iso3, year, limit, ci = idmc_api_key()) {
     httr::stop_for_status(res)
 
     dta <- httr::content(res, as = 'parsed')$result
+    if (length(dta) == 0L) return(NULL)
+
     dta <- lapply(dta, as.data.frame, stringsAsFactors = FALSE)
     dta <- bind_dtfs(dta)
     dta
@@ -268,6 +277,7 @@ get_aggregated_disaster_data <- function(iso3, year, limit,
 
     dta <- httr::content(res, as = 'parsed')$result
     if (length(dta)) return(NULL)
+
     dta <- lapply(dta, as.data.frame, stringsAsFactors = FALSE)
     dta <- bind_dtfs(dta)
     dta
