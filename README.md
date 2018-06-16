@@ -61,4 +61,19 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 ## basic example code
+
+get_countries()          # output truncated
+
+#     iso3                       geo_name
+# 1    AB9                     Abyei Area
+# 2    AFG                    Afghanistan
+# 3    ALB                        Albania
+# 4    DZA                        Algeria
+# 5    AGO                         Angola
+# 6    AIA                       Anguilla
+# 7    ATG            Antigua and Barbuda
+# 8    ARG                      Argentina
+# 9    ARM                        Armenia
+# 10   AUS                      Australia
+
 ```
