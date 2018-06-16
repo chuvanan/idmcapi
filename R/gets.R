@@ -83,7 +83,7 @@ get_overview <- function(iso3, ci = idmc_api_key()) {
 ##' @return A \code{data.frame}
 ##' @author An Chu
 ##' @export
-get_confict_data <- function(iso3, year, limit, ci = idmc_api_key()) {
+get_conflict_data <- function(iso3, year, limit, ci = idmc_api_key()) {
 
     if (missing(iso3)) {
         iso3 <- ''

@@ -17,13 +17,13 @@ test_that('If get_overview() is broken', {
 })
 
 
-test_that('If get_confict_data() is broken', {
+test_that('If get_conflict_data() is broken', {
     skip_on_cran()
 
-    res1 <- get_confict_data('RUS', year = 2015L)
+    res1 <- get_conflict_data('RUS', year = 2015L)
     expect_is(res1, 'data.frame')
 
-    res2 <- get_confict_data('RUS', year = c(2011L, 2015L))
+    res2 <- get_conflict_data('RUS', year = c(2011L, 2015L))
     expect_is(res2, 'data.frame')
 })
 

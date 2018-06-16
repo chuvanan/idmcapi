@@ -4,7 +4,7 @@
 \name{idmcapi-package}
 \alias{idmcapi}
 \alias{idmcapi-package}
-\title{idmcapi: Tools to access data from the Internal Displacement Monitoring Centre}
+\title{idmcapi: Tools to Access Data from the Internal Displacement Monitoring Centre}
 \description{
 Provide API access to IDMC database which includes data about
 displacement events (conflicts, disasters) through a public API.

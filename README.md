@@ -34,7 +34,7 @@ implemented:
 * `get_overview`: Returns a country displacement information and includes
   population and refugee numbers
 
-* `get_confict_data`: Returns all available conflict displacement data
+* `get_conflict_data`: Returns all available conflict displacement data
 
 * `get_disaster_data`: Returns all available disaster displacement data by event
   and includes hazard type information
@@ -98,14 +98,14 @@ get_overview('VNM')
 ```
 
 ``` r
-get_confict_data(iso3 = 'RUS', year = 2015)
+get_conflict_data(iso3 = 'RUS', year = 2015)
 
 #   iso3 iso           geo_name year stock_displacement stock_displacement_source new_displacements
 # 1  RUS  RU Russian Federation 2015              26607                      IDMC                 0
 #   new_displacements_source
 # 1                     IDMC
 
-get_confict_data(iso3 = 'RUS', year = c(2011, 2015))
+get_conflict_data(iso3 = 'RUS', year = c(2011, 2015))
 
 #   iso3 iso           geo_name year stock_displacement_source new_displacements new_displacements_source
 # 1  RUS  RU Russian Federation 2011                      IDMC                 0                     IDMC
