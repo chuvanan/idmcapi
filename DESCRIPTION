@@ -1,5 +1,5 @@
 Package: idmcapi
-Version: 0.0.1
+Version: 0.1
 Title: Tools to access data from the Internal Displacement Monitoring Centre
 Description: Provide API access to IDMC database which includes data about
              displacement events (conflicts, disasters) through a public API.
@@ -10,5 +10,5 @@ LazyData: true
 ByteCompile: true
 Imports: httr
 RoxygenNote: 6.0.1
-Suggests: 
+Suggests:
     testthat
