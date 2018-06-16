@@ -10,3 +10,5 @@ LazyData: true
 ByteCompile: true
 Imports: httr
 RoxygenNote: 6.0.1
+Suggests: 
+    testthat
