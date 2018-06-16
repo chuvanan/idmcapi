@@ -75,5 +75,48 @@ get_countries()          # output truncated
 # 8    ARG                      Argentina
 # 9    ARM                        Armenia
 # 10   AUS                      Australia
+```
 
+``` r
+get_overview('VNM')
+
+#                               fields                       values
+# 1                               iso3                          VNM
+# 2                           geo_name                      Vietnam
+# 3                  population.figure                     95414640
+# 4                    population.year                         2017
+# 5                  population.source       UN Population Division
+# 6                     refugee.figure                       329331
+# 7                       refugee.year                         2016
+# 8                     refugee.source                        UNHCR
+# 9                    conflict.source                         IDMC
+# 10                     disaster.year                         2017
+# 11        disaster.new_displacements                       633463
+# 12  disaster.new_displacements_since 1 January - 31 December 2017
+# 13 disaster.new_displacements_source                         IDMC
+# 14                   disaster.source                         IDMC
+```
+
+``` r
+get_confict_data(iso3 = 'RUS', year = 2015)
+
+#   iso3 iso           geo_name year stock_displacement stock_displacement_source new_displacements
+# 1  RUS  RU Russian Federation 2015              26607                      IDMC                 0
+#   new_displacements_source
+# 1                     IDMC
+
+get_confict_data(iso3 = 'RUS', year = c(2011, 2015))
+
+#   iso3 iso           geo_name year stock_displacement_source new_displacements new_displacements_source
+# 1  RUS  RU Russian Federation 2011                      IDMC                 0                     IDMC
+# 2  RUS  RU Russian Federation 2012                      IDMC                 0                     IDMC
+# 3  RUS  RU Russian Federation 2013                      IDMC                 0                     IDMC
+# 4  RUS  RU Russian Federation 2014                      IDMC                 0                     IDMC
+# 5  RUS  RU Russian Federation 2015                      IDMC                 0                     IDMC
+#   stock_displacement
+# 1                 NA
+# 2              29000
+# 3              34900
+# 4              25378
+# 5              26607
 ```
