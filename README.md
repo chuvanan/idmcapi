@@ -120,3 +120,38 @@ get_confict_data(iso3 = 'RUS', year = c(2011, 2015))
 # 4              25378
 # 5              26607
 ```
+
+``` r
+get_strata_data('RUS')
+
+#   iso3         type displacement_type       date figure
+# 1  RUS IDPs (Stock)          Conflict 2016-12-31  19327
+```
+
+``` r
+get_figure_analysis('RUS')
+
+#     id iso3 year                    type displacement_type
+# 1 6004  RUS 2017            IDPs (Stock)          Conflict
+# 2 6118  RUS 2017       Returnees (Stock)          Conflict
+# 3 6061  RUS 2017 New Displacement (Flow)          Conflict
+#                                                                                                                                                                                                                                                     public_figure_analysis
+# 1 This estimate is based on data provided directly by the Government of the Federation of Russia on 2016. Due to the very protracted nature of this caseload, humanitarian organizations are not actively tracking internal forced displacement in the Russian Federation.
+# 2                                                                                                                                                                                                                              There were no new returns reported in 2017.
+# 3                                                                                                                                                                                                                          There was no new displacement reported in 2017.
+```
+
+``` r
+get_disaster_events('RUS')
+
+#   iso3     subcategory                                                                           name       date
+# 1  RUS Weather related                               Russian Federation: floods - Tyumen - 10/05/2017 2017-05-10
+# 2  RUS Weather related Russian Federation: forest fires - Irkutsk; Buryatia; Krasnoyarsk - 28/04/2017 2017-04-28
+# 3  RUS Weather related                            Russian Federation: floods - Stavropol - 24/05/2017 2017-05-24
+# 4  RUS Weather related              Russian Federation: floods - Primorskye; Khabarkovsk - 07/08/2017 2017-08-07
+#   new_displacements
+# 1               643
+# 2              1220
+# 3              3600
+# 4               436
+```
