@@ -1,8 +1,9 @@
 Package: idmcapi
-Version: 0.1.0
+Version: 0.1.1
 Title: Tools to Access Data from the Internal Displacement Monitoring Centre
 Description: Provide API access to IDMC database which includes data about
-             displacement events (conflicts, disasters) through a public API.
+             displacement events (conflicts, disasters) through a public API
+             (<http://www.internal-displacement.org/database>)
 Authors@R: c(person("Chu", "An", , email = "chuvanan.cva@gmail.com", role = c("aut", "cre")))
 License: MIT + file LICENSE
 Encoding: UTF-8
