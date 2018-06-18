@@ -17,6 +17,12 @@ A \code{data.frame} or NULL if the API returns nothing
 \description{
 Returns the figure analysis for a country
 }
+\examples{
+\dontrun{
+get_figure_analysis(iso3 = 'VNM')
+get_figure_analysis(iso3 = 'ABF')
+}
+}
 \author{
 An Chu
 }

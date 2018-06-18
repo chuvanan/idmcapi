@@ -23,6 +23,18 @@ A \code{data.frame}
 Returns all available displacement data for both disaster and conflict by
 year and country
 }
+\examples{
+\dontrun{
+## retrieve all data of Vietnam (VNM)
+get_displacement_data(iso = 'VNM')
+## retrieve data from Vietnam in 2015
+get_displacement_data('VNM', year = 2015)
+## retrieve data from Vietnam in period 2011-2015
+get_displacement_data('VNM', year = c(2011, 2015))
+## limit the number of records returned by 10
+get_displacement_data('VNM', limit = 10)
+}
+}
 \author{
 An Chu
 }

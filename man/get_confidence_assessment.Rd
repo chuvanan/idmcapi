@@ -18,6 +18,12 @@ A \code{data.frame} or NULL if the API returns nothing
 Returns the confidence assessment data for a country by type of displacement
 and fact type
 }
+\examples{
+\dontrun{
+get_confidence_assessment(iso3 = 'VNM')
+get_confidence_assessment(iso3 = 'ABF')
+}
+}
 \author{
 An Chu
 }

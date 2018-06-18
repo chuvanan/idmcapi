@@ -12,6 +12,11 @@
 ##' @return A character vector containing the IDMC API key
 ##' @author An Chu
 ##' @export
+##' @examples
+##' \dontrun{
+##' idmc_api_key()
+##' idmc_api_key(force = TRUE)
+##' }
 idmc_api_key <- function(force = FALSE) {
 
     key <- Sys.getenv('IDMC_API_KEY')

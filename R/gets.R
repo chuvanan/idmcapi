@@ -13,6 +13,13 @@
 ##'     'name'.
 ##' @author An Chu
 ##' @export
+##' @examples
+##' \dontrun{
+##' ## sorting by country name (default)
+##' get_countries()
+##' ## sorting data frame by country's ISO3 code
+##' get_countries(sort = 'iso3')
+##' }
 get_countries <- function(sort = c('name', 'iso3'), ci = idmc_api_key()) {
 
     sort <- match.arg(sort)
@@ -44,6 +51,11 @@ get_countries <- function(sort = c('name', 'iso3'), ci = idmc_api_key()) {
 ##' @return A \code{data.frame}
 ##' @author An Chu
 ##' @export
+##' @examples
+##' \dontrun{
+##' get_overview(iso3 = 'RUS')
+##' get_overview(iso3 = 'VNM')
+##' }
 get_overview <- function(iso3, ci = idmc_api_key()) {
 
     stopifnot(!missing(iso3))
@@ -83,6 +95,17 @@ get_overview <- function(iso3, ci = idmc_api_key()) {
 ##' @return A \code{data.frame}
 ##' @author An Chu
 ##' @export
+##' @examples
+##' \dontrun{
+##' ## retrieve all data of Vietnam (VNM)
+##' get_conflict_data(iso = 'VNM')
+##' ## retrieve data from Vietnam in 2015
+##' get_conflict_data('VNM', year = 2015)
+##' ## retrieve data from Vietnam in period 2011-2015
+##' get_conflict_data('VNM', year = c(2011, 2015))
+##' ## limit the number of records returned by 10
+##' get_conflict_data('VNM', limit = 10)
+##' }
 get_conflict_data <- function(iso3, year, limit, ci = idmc_api_key()) {
 
     if (missing(iso3)) {
@@ -138,6 +161,17 @@ get_conflict_data <- function(iso3, year, limit, ci = idmc_api_key()) {
 ##' @return A \code{data.frame}
 ##' @author An Chu
 ##' @export
+##' @examples
+##' \dontrun{
+##' ## retrieve all data of Vietnam (VNM)
+##' get_disaster_data(iso = 'VNM')
+##' ## retrieve data from Vietnam in 2015
+##' get_disaster_data('VNM', year = 2015)
+##' ## retrieve data from Vietnam in period 2011-2015
+##' get_disaster_data('VNM', year = c(2011, 2015))
+##' ## limit the number of records returned by 10
+##' get_disaster_data('VNM', limit = 10)
+##' }
 get_disaster_data <- function(iso3, year, limit, ci = idmc_api_key()) {
 
     if (missing(iso3)) {
@@ -192,6 +226,17 @@ get_disaster_data <- function(iso3, year, limit, ci = idmc_api_key()) {
 ##' @return A \code{data.frame}
 ##' @author An Chu
 ##' @export
+##' @examples
+##' \dontrun{
+##' ## retrieve all data of Vietnam (VNM)
+##' get_displacement_data(iso = 'VNM')
+##' ## retrieve data from Vietnam in 2015
+##' get_displacement_data('VNM', year = 2015)
+##' ## retrieve data from Vietnam in period 2011-2015
+##' get_displacement_data('VNM', year = c(2011, 2015))
+##' ## limit the number of records returned by 10
+##' get_displacement_data('VNM', limit = 10)
+##' }
 get_displacement_data <- function(iso3, year, limit, ci = idmc_api_key()) {
 
     if (missing(iso3)) {
@@ -245,6 +290,17 @@ get_displacement_data <- function(iso3, year, limit, ci = idmc_api_key()) {
 ##' @return A \code{data.frame}
 ##' @author An Chu
 ##' @export
+##' @examples
+##' \dontrun{
+##' ## retrieve all data of Vietnam (VNM)
+##' get_aggregated_disaster_data(iso = 'VNM')
+##' ## retrieve data from Vietnam in 2015
+##' get_aggregated_disaster_data('VNM', year = 2015)
+##' ## retrieve data from Vietnam in period 2011-2015
+##' get_aggregated_disaster_data('VNM', year = c(2011, 2015))
+##' ## limit the number of records returned by 10
+##' get_aggregated_disaster_data('VNM', limit = 10)
+##' }
 get_aggregated_disaster_data <- function(iso3, year, limit,
                                          ci = idmc_api_key()) {
 
@@ -297,6 +353,11 @@ get_aggregated_disaster_data <- function(iso3, year, limit,
 ##' @return A \code{data.frame}
 ##' @author An Chu
 ##' @export
+##' @examples
+##' \dontrun{
+##' get_strata_data(iso3 = 'VNM')
+##' get_strata_data(iso3 = 'ABF')
+##' }
 get_strata_data <- function(iso3, ci = idmc_api_key()) {
 
     stopifnot(!missing(iso3))
@@ -331,6 +392,11 @@ get_strata_data <- function(iso3, ci = idmc_api_key()) {
 ##' @return A \code{data.frame} or NULL if the API returns nothing
 ##' @author An Chu
 ##' @export
+##' @examples
+##' \dontrun{
+##' get_figure_analysis(iso3 = 'VNM')
+##' get_figure_analysis(iso3 = 'ABF')
+##' }
 get_figure_analysis <- function(iso3, ci = idmc_api_key()) {
 
     stopifnot(!missing(iso3))
@@ -362,6 +428,11 @@ get_figure_analysis <- function(iso3, ci = idmc_api_key()) {
 ##' @return A \code{data.frame} or NULL if the API returns nothing
 ##' @author An Chu
 ##' @export
+##' @examples
+##' \dontrun{
+##' get_confidence_assessment(iso3 = 'VNM')
+##' get_confidence_assessment(iso3 = 'ABF')
+##' }
 get_confidence_assessment <- function(iso3, ci = idmc_api_key()) {
 
     stopifnot(!missing(iso3))
@@ -391,6 +462,11 @@ get_confidence_assessment <- function(iso3, ci = idmc_api_key()) {
 ##' @return A \code{data.frame} or NULL if the API returns nothing
 ##' @author An Chu
 ##' @export
+##' @examples
+##' \dontrun{
+##' get_disaster_events(iso3 = 'VNM')
+##' get_disaster_events(iso3 = 'ABF')
+##' }
 get_disaster_events <- function(iso3, ci = idmc_api_key()) {
 
     stopifnot(!missing(iso3))

@@ -17,6 +17,12 @@ A \code{data.frame}
 \description{
 Returns the strata data for a country by type of displacement and fact type
 }
+\examples{
+\dontrun{
+get_strata_data(iso3 = 'VNM')
+get_strata_data(iso3 = 'ABF')
+}
+}
 \author{
 An Chu
 }

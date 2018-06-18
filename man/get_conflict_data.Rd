@@ -23,6 +23,18 @@ A \code{data.frame}
 \description{
 Returns all available conflict displacement data
 }
+\examples{
+\dontrun{
+## retrieve all data of Vietnam (VNM)
+get_conflict_data(iso = 'VNM')
+## retrieve data from Vietnam in 2015
+get_conflict_data('VNM', year = 2015)
+## retrieve data from Vietnam in period 2011-2015
+get_conflict_data('VNM', year = c(2011, 2015))
+## limit the number of records returned by 10
+get_conflict_data('VNM', limit = 10)
+}
+}
 \author{
 An Chu
 }

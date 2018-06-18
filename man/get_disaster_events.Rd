@@ -17,6 +17,12 @@ A \code{data.frame} or NULL if the API returns nothing
 \description{
 Returns events associated with an iso code
 }
+\examples{
+\dontrun{
+get_disaster_events(iso3 = 'VNM')
+get_disaster_events(iso3 = 'ABF')
+}
+}
 \author{
 An Chu
 }

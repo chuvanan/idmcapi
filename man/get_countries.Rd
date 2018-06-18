@@ -19,6 +19,14 @@ A \code{data.frame} of search results, with two columns: 'iso3' and
 \description{
 Get a list of countries in the database
 }
+\examples{
+\dontrun{
+## sorting by country name (default)
+get_countries()
+## sorting data frame by country's ISO3 code
+get_countries(sort = 'iso3')
+}
+}
 \author{
 An Chu
 }

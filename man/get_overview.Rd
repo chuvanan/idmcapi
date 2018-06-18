@@ -18,6 +18,12 @@ A \code{data.frame}
 Get a country displacement information and includes population and refugee
 numbers
 }
+\examples{
+\dontrun{
+get_overview(iso3 = 'RUS')
+get_overview(iso3 = 'VNM')
+}
+}
 \author{
 An Chu
 }

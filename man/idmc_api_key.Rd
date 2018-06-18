@@ -17,6 +17,12 @@ The API wrapper functions in this package all rely on a IDMC API key
 residing in the environment variable `IDMC_API_KEY`. The easiest way to
 accomplish this is to set it in the `.Renviron` file in your home directory.
 }
+\examples{
+\dontrun{
+idmc_api_key()
+idmc_api_key(force = TRUE)
+}
+}
 \author{
 An Chu
 }
