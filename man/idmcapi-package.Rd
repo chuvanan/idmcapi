@@ -6,9 +6,9 @@
 \alias{idmcapi-package}
 \title{idmcapi: Tools to Access Data from the Internal Displacement Monitoring Centre}
 \description{
-Provide API access to IDMC database which includes data about
-displacement events (conflicts, disasters) through a public API
-(<http://www.internal-displacement.org/database>)
+Provide API access to IDMC database which includes data
+             about displacement events (conflicts, disasters) through a
+             public API (<http://www.internal-displacement.org/database>).
 }
 \author{
 \strong{Maintainer}: Chu An \email{chuvanan.cva@gmail.com}
