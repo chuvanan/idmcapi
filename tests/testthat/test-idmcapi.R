@@ -1,6 +1,7 @@
 
 
 context('IDMC API')
+skip("Skip API Check")
 
 test_that('If get_countries() is broken', {
     skip_on_cran()
