@@ -1,5 +1,9 @@
 # idmcapi
 
+<!-- badges: start -->
+[![Travis build status](https://travis-ci.org/chuvanan/idmcapi.svg?branch=master)](https://travis-ci.org/chuvanan/idmcapi)
+<!-- badges: end -->
+
 The goal of `idmcapi` is to provide R functions to get access to
 [IDMC](http://www.internal-displacement.org/) database. For more information
 about the database, please visit this
